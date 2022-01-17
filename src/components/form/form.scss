@@ -1,0 +1,203 @@
+@import "../../variables.scss";
+
+.form {
+    width: 60% !important;
+    padding: 3rem;
+    text-align: left;
+    border-radius: 0.8rem;
+    border: 0.1rem solid #257b8e;
+    background: linear-gradient(180deg, rgba(33, 253, 240, 0.33) 0%, rgba(33, 253, 253, 0.06) 100%);
+
+    & > div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        input {
+            width: 100%;
+            margin: 0 0 2rem 0;
+            padding: 0.5rem 2rem;
+            color: $txt;
+            font-size: 1.5rem;
+            border: 1px solid $primary;
+            background-color: transparent;
+            border-radius: 0.5rem;
+            outline: none;
+        }
+
+        p {
+            width: 100%;
+            margin: 0 0 0.5rem 0;
+        }
+
+        .row{
+            justify-content: space-between;
+            
+            input, p{
+                width: 49%;
+            }
+        }
+
+        button{
+            width: 50%;
+        }
+    }
+}
+
+.form_1 {
+    padding: 3rem;
+    border-radius: 0.8rem;
+    border: 0.1rem solid #257b8e;
+    background: linear-gradient(180deg, rgba(33, 253, 240, 0.33) 0%, rgba(33, 253, 253, 0.06) 100%);
+    overflow: hidden;
+    position: relative;
+
+    h3 {
+        font-weight: 900;
+        font-size: 32px;
+        line-height: 55px;
+    }
+    label {
+        margin: 0 0 0.5rem 0;
+    }
+    &_row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        & label {
+            display: block;
+        }
+
+        @media only screen and (max-width: 960px) {
+            flex-direction: column;
+        }
+    }
+
+    &_cell {
+        width: 48%;
+        @media only screen and (max-width: 960px) {
+            width: 100%;
+        }
+    }
+
+    & [type="text"],
+    & textarea {
+        color: $txt;
+        outline: none;
+        border: 1px solid $primary;
+        padding: 0.5rem 2rem;
+        font-size: 1.5rem;
+        background-color: transparent;
+        border-radius: 0.5rem;
+        margin: 0 0 2rem 0;
+        min-width: 100%;
+
+        @media only screen and (max-width: 520px) {
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            margin: 0 0 1rem 0;
+        }
+    }
+
+    & textarea {
+        height: 75%;
+        resize: none;
+    }
+
+    & [type="checkbox"] {
+        opacity: 0;
+        &:checked {
+            & + label::before {
+                border: 2px solid $secondary;
+                border-left: none;
+                border-top: none;
+                width: 8px;
+                height: 8px;
+
+                left: -19px;
+                top: 4px;
+
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    & [type="checkbox"] + label {
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Chrome/Safari/Opera */
+        -khtml-user-select: none; /* Konqueror */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none;
+        margin: 0 0 0 5px;
+        position: relative;
+
+        &::after,
+        &::before {
+            position: absolute;
+            content: "";
+            display: block;
+        }
+        &::after {
+            left: -25px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 5px;
+            border: 1px solid $primary;
+        }
+        @media only screen and (max-width: 720px) {
+            font-size: 0.8rem;
+        }
+        @media only screen and (max-width: 520px) {
+            display: block !important;
+            width: 200px;
+            font-size: 0.7rem;
+            margin: auto;
+        }
+    }
+
+    &_footer {
+        margin: 3rem 0 0 0;
+
+        & button {
+            min-width: 100%;
+        }
+    }
+
+    @media only screen and (max-width: 520px) {
+        padding: 1rem 0.5rem;
+    }
+
+    &_done {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: -100vh;
+        left: 0;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $bc;
+        transition: 0.3s;
+        z-index: 100;
+
+        h3 {
+            text-transform: uppercase;
+            color: $primary;
+            text-shadow: 0px 5px 0 $secondary;
+            transition: 0.3s;
+
+            &:hover {
+                // color: $secondary;
+                text-shadow: 0px 10px 0 $secondary;
+            }
+        }
+    }
+}
+
+.form_done_show {
+    top: 0;
+}

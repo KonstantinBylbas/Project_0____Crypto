@@ -1,0 +1,36 @@
+@import './variables.scss';
+
+.App {
+  text-align: center;
+}
+
+.modal{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: -130vh;
+    left: 0;
+    color: $txt;
+    background-color: rgba($color: #000000, $alpha: 0.9);
+    z-index: 101;
+    transition: 0.3s;
+
+    &Open{
+        top: 0;
+    }
+
+    form{
+        width: 80vw;
+        margin: 7rem auto;
+    }
+
+    .close{
+        width: 3rem;
+        height: 3rem;
+        position: absolute;
+        right: 3rem;
+        top: 3rem;
+        fill: $txt;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,621 @@
+@import "../../variables.scss";
+
+.general {
+    text-align: left;
+    color: $txt;
+    background-color: #0a0914;
+
+    &::after,
+    &::before {
+        content: "";
+        display: block;
+        width: 20%;
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+
+        filter: blur(200px);
+    }
+    &::after {
+        left: 0;
+        background-color: rgb(228, 14, 207);
+    }
+    &::before {
+        right: 0;
+        background-color: #21d4fd;
+    }
+    &_header {
+        height: 120vh;
+        padding: 100px 0 0;
+
+        position: relative;
+
+        background-image: url(./img/head1/bc.png);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: contain;
+
+        z-index: 2;
+
+        &_card1,
+        &_card2,
+        &_card3,
+        &_card4,
+        &_card5,
+        &_card6,
+        &_card7,
+        &_desc {
+            position: absolute;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            will-change: transform;
+        }
+
+        &_card1 {
+            width: 25vw;
+            height: 25vw;
+            left: 1vw;
+            top: 1vw;
+            background-image: url(./img/head1/01.png);
+        }
+
+        &_card2 {
+            width: 5vw;
+            height: 5vw;
+            left: 2vw;
+            top: 50vw;
+            background-image: url(./img/head1/02.png);
+        }
+
+        &_card3 {
+            width: 10vw;
+            height: 10vw;
+            left: 35%;
+            top: 70%;
+            background-image: url(./img/head1/03.png);
+        }
+
+        &_card4 {
+            width: 200px;
+            height: 200px;
+            left: 45%;
+            top: 15%;
+            background-image: url(./img/head1/04.png);
+        }
+
+        &_card5 {
+            width: 8vw;
+            height: 8vw;
+            left: 85%;
+            top: 15%;
+            background-image: url(./img/head1/05.png);
+        }
+
+        &_card6 {
+            width: 25vw;
+            height: 25vw;
+            left: 85vw;
+            top: 1vw;
+            background-image: url(./img/head1/06.png);
+        }
+        &_desc {
+            width: 25vw;
+            height: 25vw;
+            left: 5vw;
+            bottom: 0;
+            @media only screen and (max-width: 960px) {
+                bottom: 10vw;
+            }
+        }
+
+        @media only screen and (max-width: 960px) {
+            height: 100vh;
+        }
+    }
+    &_content {
+        position: relative;
+        z-index: 100;
+        height: 100%;
+    }
+    &_title,
+    &_desc {
+        & pre {
+            background: -webkit-linear-gradient(-90deg, $secondary, $primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    &_desc {
+        position: absolute;
+        bottom: 10%;
+    }
+
+    &_page1 {
+        width: 100%;
+        height: 100%;
+        &_cell {
+            width: 48%;
+
+            position: relative;
+
+            &_bc {
+                width: 100%;
+                height: 100%;
+                background-image: url(./img/content/01.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                filter: blur(5px);
+            }
+            h6 {
+                position: absolute;
+                top: 10%;
+                left: 40%;
+                width: 160px;
+                height: 160px;
+                border-radius: 50%;
+                border: 10px solid $primary;
+                line-height: 160px;
+                vertical-align: middle;
+                text-align: center;
+            }
+
+            p {
+                color: $txt;
+                line-height: 32.5px;
+            }
+            h3 {
+                background: -webkit-linear-gradient(0deg, $secondary, $primary);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            & > img {
+                width: 100%;
+                border-radius: 0.5rem;
+                transition: 0.5s;
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+
+        &_section1 {
+            div {
+                width: 48%;
+            }
+        }
+
+        &_section2 {
+            background: linear-gradient(180deg, rgba(7, 196, 239, 0.61) 0%, rgba(7, 196, 239, 0.25) 100%);
+
+            .container {
+                .row {
+                    align-items: center;
+
+                    img {
+                        width: 5rem;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+
+        // &_section3 {
+        //     .container {
+        //         padding: 0 17rem 0 0;
+
+        //         ul {
+        //             list-style: inside;
+
+        //             li {
+        //                 margin: 1rem;
+
+        //                 &::marker {
+        //                     font-size: 2rem;
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+    }
+
+    &_advantages {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        & li {
+            position: relative;
+            z-index: 102;
+            width: 48%;
+            margin: 1rem 0;
+            padding: 0 0 1rem 6rem;
+
+            background-image: url(./img/content/04.png);
+            background-repeat: no-repeat;
+            background-size: 4.5rem;
+            background-position: left center;
+
+            &::before {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 1px;
+
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                z-index: -1;
+
+                background: rgb(10, 9, 20);
+                background: linear-gradient(
+                    90deg,
+                    rgba(10, 9, 20, 1) 4%,
+                    rgba(33, 212, 253, 1) 51%,
+                    rgba(10, 9, 20, 1) 100%
+                );
+                transition: 0.3s;
+            }
+
+            &:hover::before {
+                height: 110%;
+            }
+        }
+
+        font-weight: 500;
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+
+    .slider {
+        margin: 1rem 0;
+
+        .slick-arrow {
+            width: 40px;
+            padding: 1rem;
+            background-color: #0a3f53;
+            display: flex !important;
+            top: 2rem;
+            right: 10rem;
+            align-items: center;
+            z-index: 1;
+
+            &:hover {
+                background-color: #c4c4c4;
+
+                &::before {
+                    color: $bc;
+                }
+            }
+            &::before {
+                display: inline-block;
+                margin: -8px 0 0 0;
+                font-size: 1.5rem;
+                line-height: 1.5rem;
+                vertical-align: top;
+            }
+
+            &.slick-next {
+                &::before {
+                    content: "›";
+                    display: block;
+                }
+            }
+            &.slick-prev {
+                left: unset;
+                right: 13rem;
+
+                &::before {
+                    content: "‹";
+                    display: block;
+                }
+            }
+        }
+
+        .row {
+            padding: 5rem 8rem;
+            display: flex !important;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            &.waves {
+                background-image: url(./img/slider/bg_waves.png);
+            }
+            &.nero {
+                background-image: url(./img/slider/bg_nero.png);
+            }
+            &.planet {
+                background-image: url(./img/slider/bg_planet.png);
+            }
+
+            h2 {
+                margin: 0;
+            }
+        }
+
+        .block {
+            margin: 0 0.5rem;
+            padding: 1rem;
+            background: linear-gradient(180deg, rgba(14, 207, 252, 0.33) 0%, rgba(33, 212, 253, 0.06) 100%);
+            border: 1px solid #257b8e;
+            border-radius: 11px;
+
+            .row {
+                padding: 0;
+                height: max-content;
+
+                img {
+                    width: 90%;
+                }
+
+                .column {
+                    p {
+                        margin: 1rem 0 0 0;
+                        color: $txt;
+                        line-height: 1.5rem;
+
+                        &:nth-child(1) {
+                            span {
+                                color: #b5ca54;
+                            }
+                        }
+                        &:nth-child(2) {
+                            span {
+                                color: #80c2d7;
+                            }
+                        }
+                        &:nth-child(3) {
+                            span {
+                                color: #e4c247;
+                            }
+                        }
+                        &:nth-child(4) {
+                            span {
+                                color: #e4c247;
+                            }
+                        }
+                    }
+                }
+            }
+
+            p {
+                color: #b2adad;
+            }
+
+            h5 {
+                margin: 0;
+            }
+
+            .left,
+            .right {
+                p {
+                    color: $txt;
+                }
+            }
+            .left {
+                float: left;
+            }
+            .right {
+                text-align: right;
+                float: right;
+            }
+        }
+    }
+
+    &_forex {
+        ul {
+            list-style-type: disc;
+            padding: 0 0 0 20px;
+            ::marker {
+                color: $primary;
+                font-size: 2rem;
+            }
+            li {
+                margin: 1.5rem 0;
+            }
+        }
+        button {
+            border: none;
+            outline: none;
+
+            background: transparent;
+            border: 1px solid $txt;
+            border-radius: 0.5rem;
+
+            color: $txt;
+            font-weight: 900;
+            font-size: 20px;
+            line-height: 38px;
+
+            padding: 1rem;
+
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover {
+                border-color: $primary;
+                color: $primary;
+            }
+        }
+    }
+    &_table {
+        background: linear-gradient(180deg, rgba(14, 207, 252, 0.33) 0%, rgba(33, 212, 253, 0.06) 100%);
+        border: 1px solid #257b8e;
+        border-radius: 11px;
+        text-align: center;
+
+        table {
+            width: 100%;
+            padding: 2rem 2rem 4rem;
+            caption {
+                font-weight: bold;
+                font-size: 23px;
+                line-height: 55px;
+            }
+            thead {
+                color: #b3adad;
+                font-size: 13px;
+                line-height: 21px;
+            }
+            tbody {
+                font-size: 18px;
+                line-height: 21px;
+                tr {
+                    line-height: 2.8rem;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1300px) {
+        .slider {
+            .row {
+                padding: 5rem;
+            }
+
+            .block {
+                margin: 0;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1100px) {
+        .slider {
+            .row {
+                & > div:nth-child(1) {
+                    display: none;
+                }
+                & > div:nth-child(2) {
+                    width: 100%;
+                }
+
+                &.waves, &.nero, &.planet {
+                    height: 35rem;
+                }
+                
+                &.chart{
+                    justify-content: center;
+                    & > div:nth-child(1){
+                        width: 70%;
+                        display: block;
+                    }
+                    & > div:nth-child(2) {
+                        width: max-content;
+                    }
+                }
+
+                &.specific{
+                    & > div:nth-child(1){
+                        width: 100%;
+                        display: block;
+                    }
+                    & > div:nth-child(2), & > div:nth-child(3) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1000px) {
+        &_page1 {
+            & .row {
+                flex-wrap: wrap;
+            }
+
+            &_cell {
+                &.logo {
+                    width: 20%;
+
+                    & + div {
+                        width: 65%;
+                    }
+                }
+            }
+
+            &_section3 {
+                .container {
+                    padding: 0;
+                }
+            }
+        }
+
+        .slider{
+            .slick-arrow {
+                right: 5rem;
+                &.slick-prev {
+                    right: 8rem;
+                }
+            }
+        }
+
+        &_advantages {
+            li {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 700px) {
+        &_page1 {
+            &_cell {
+                width: 100%;
+
+                &.logo {
+                    display: none;
+
+                    & + div {
+                        width: 100%;
+                    }
+                }
+            }
+
+            &_section1 {
+                div {
+                    width: 100%;
+                }
+            }
+
+            &_section2 {
+                h5 {
+                    display: none;
+                }
+            }
+        }
+
+        .slider {
+            .row {
+                padding: 4rem 2rem 2rem 2rem;
+            }
+        }
+
+        &_advantages {
+            li {
+                width: 100%;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        &_page1 {
+            &_section2 {
+                display: none;
+            }
+        }
+
+        &_slider, .slider {
+            display: none;
+        }
+
+        &_advantages {
+            li {
+                padding: 0 1rem;
+                font-size: 1.2rem;
+                line-height: 2rem;
+                background-image: none;
+            }
+        }
+    }
+}

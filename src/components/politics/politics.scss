@@ -1,0 +1,107 @@
+.politics{
+    color: #fff;
+    background-color: #0A0914;
+    padding: 10rem 1rem;
+    position: relative;
+
+    &_title{
+       margin: 0;
+       text-transform: uppercase;
+       color: #21D4FD;
+       text-shadow: 0px 5px 0 #E40ECF;
+    }
+
+    & p{
+        // text-shadow: -1px -1px #000,
+        // 0 1px 0 #444;
+        color: #eee;
+        font-size: 0.9rem;
+        text-align: justify;
+        line-height: 1.3rem;
+        letter-spacing: 1px;
+
+        position: relative;
+        z-index: 2;
+       
+        &::after, &::before{
+            content: '';
+            display: block;
+            width: 100px;
+            height: 100px;
+            filter: blur(50px);
+            position: absolute;
+        }
+
+        // &::before{
+        //     animation: moveX 5s linear 0s infinite alternate;
+        // }
+
+        // &::after{
+        //     animation: moveY 5s linear 0s infinite alternate;
+        // }
+
+    }
+
+    ul{
+        list-style-type: square;
+        padding: 0 0 0 40px;
+
+        ::marker{
+            font-size: 2rem;
+        }
+
+        li{
+            margin: 0.5rem 0;
+            line-height: 1rem;
+            vertical-align: top;
+        }
+    }
+ 
+    // &::after,
+    // &::before {
+    //   position: absolute;
+    //   content: "";
+    //   display: block;
+
+    //   width: 400px;
+    //   height: 400px;
+
+    //   filter: blur(231px);
+    //   position: absolute;
+    //   z-index: 1;
+    // }
+
+    // &::after {
+    //   background-color: #21D4FD;
+    //   top: 20%;
+    //   right: -5%;
+    // }
+    // &::before {
+    //   background-color: #E40ECF;
+    //   top: 60%;
+    //   left: -5%;
+    // }
+}
+
+ 
+// @keyframes moveX {
+//     from{
+//         background-color: #21D4FD;
+//         left: -20vw;
+//     }
+//     to{
+//         background-color: #E40ECF;
+//         left: 120vw;
+//     }
+// }
+
+// @keyframes moveY {
+//     from{
+//         background-color: #E40ECF;
+//         top: -20vh;
+//     }
+//     to{
+//         background-color:  #21D4FD;
+//         top: 120vh;
+//     }
+// }
