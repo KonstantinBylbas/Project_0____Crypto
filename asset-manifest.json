@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/Project_0____Crypto/static/css/main.daa917db.chunk.css",
+    "main.js": "/Project_0____Crypto/static/js/main.b6604875.chunk.js",
+    "main.js.map": "/Project_0____Crypto/static/js/main.b6604875.chunk.js.map",
+    "runtime-main.js": "/Project_0____Crypto/static/js/runtime-main.5ce30454.js",
+    "runtime-main.js.map": "/Project_0____Crypto/static/js/runtime-main.5ce30454.js.map",
+    "static/css/2.9b2ad803.chunk.css": "/Project_0____Crypto/static/css/2.9b2ad803.chunk.css",
+    "static/js/2.c94ebdca.chunk.js": "/Project_0____Crypto/static/js/2.c94ebdca.chunk.js",
+    "static/js/2.c94ebdca.chunk.js.map": "/Project_0____Crypto/static/js/2.c94ebdca.chunk.js.map",
+    "index.html": "/Project_0____Crypto/index.html",
+    "static/css/2.9b2ad803.chunk.css.map": "/Project_0____Crypto/static/css/2.9b2ad803.chunk.css.map",
+    "static/css/main.daa917db.chunk.css.map": "/Project_0____Crypto/static/css/main.daa917db.chunk.css.map",
+    "static/js/2.c94ebdca.chunk.js.LICENSE.txt": "/Project_0____Crypto/static/js/2.c94ebdca.chunk.js.LICENSE.txt",
+    "static/media/general.scss": "/Project_0____Crypto/static/media/bg_waves.758cb96a.png",
+    "static/media/offers.scss": "/Project_0____Crypto/static/media/01.e6b14f9e.png",
+    "static/media/02.492cb064.jpg": "/Project_0____Crypto/static/media/02.492cb064.jpg",
+    "static/media/03.dcb6b013.jpg": "/Project_0____Crypto/static/media/03.dcb6b013.jpg",
+    "static/media/IFSC.4adc095b.png": "/Project_0____Crypto/static/media/IFSC.4adc095b.png",
+    "static/media/TFC.ede79fb0.png": "/Project_0____Crypto/static/media/TFC.ede79fb0.png",
+    "static/media/advice.scss": "/Project_0____Crypto/static/media/bc.5105f78b.jpg",
+    "static/media/team.scss": "/Project_0____Crypto/static/media/bc.6d4353bd.png",
+    "static/media/chart.6fb8b125.png": "/Project_0____Crypto/static/media/chart.6fb8b125.png",
+    "static/media/rewards.68e7a89a.png": "/Project_0____Crypto/static/media/rewards.68e7a89a.png",
+    "static/media/slick-theme.css": "/Project_0____Crypto/static/media/slick.c94f7671.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5ce30454.js",
+    "static/css/2.9b2ad803.chunk.css",
+    "static/js/2.c94ebdca.chunk.js",
+    "static/css/main.daa917db.chunk.css",
+    "static/js/main.b6604875.chunk.js"
+  ]
+}
